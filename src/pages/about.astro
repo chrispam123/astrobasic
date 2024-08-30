@@ -21,6 +21,7 @@ const skills: string[] = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writin
 const happy = true;
 const finished = false;
 const goal = 3;
+import Navegation from '../components/Navegation.astro'
 ---
 <html>
 <head>
@@ -28,9 +29,10 @@ const goal = 3;
   </head>
   <body>
     <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/blog">blog</a>
+      <nav>
+        <center>
+          <Navegation />
+        </center>
     </nav>
     
     <header>
