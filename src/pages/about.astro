@@ -1,5 +1,30 @@
+---
+const pageTitle = "About Me";
+
+// @ts-check  // Habilita la verificación de tipos en el front matter
+
+interface Identity {
+  firstName: string;
+  country: string;
+  occupation: string;
+  hobbies: string[];
+}
+
+const identity: Identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills: string[] = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const happy = true;
+const finished = false;
+const goal = 3;
+---
+<html>
 <head>
-    <title>casa</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
     <nav>
@@ -9,12 +34,28 @@
     </nav>
     
     <header>
-      <h1>About Page</h1>
+      <h1>{pageTitle}</h1>
     </header>
     <main>
       <p>Welcome to the About page!</p>
+      <section>{happy && <p>I am happy to be learning Astro!</p>}
+
+        {finished && <p>I finished this tutorial!</p>}
+        
+        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}ame: {identity.firstName}</li>
+          <li>Country: {identity.country}</li>
+          <li>Occupation: {identity.occupation}</li>
+          <li>Hobbies: {identity.hobbies.join(", ")}</li>
+        </ul>
+
+        {happy && <p>I am happy to be learning Astro!</p>}
+
+        {finished && <p>I finished this tutorial!</p>}
+
+        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
     </main>
     <footer>
       <p>© 2022 Your Website</p>
     </footer>
   </body>
+  </html>

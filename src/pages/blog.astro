@@ -1,22 +1,33 @@
 ---
 title: "My Awesome Blog y la arquitectura de astro"
+const pageTitle = "Miblog";
 ---
 <html lang="es">
 <head>
     <astro-head>
-        <title>Miblog</title>
+        <title>{pageTitle}</title>
     </astro-head>
 </head>
 
 <body>
     <astro-content>
         <h1>Welcome to my blog!</h1>
-        <p>This is my first blog post. Stay tuned for more exciting content!</p>
+        
         <nav>
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/blog">blog</a>
         </nav>
+
+        <p>This is my first blog post. Stay tuned for more exciting content!</p>
+        <p>This is where I will post about my journey learning Astro.</p>
+        <ul>
+        <li><a href="/posts/post-1/">Post 1</a></li>
+        <li><a href="/posts/post-2/">Post 2</a></li>
+        <li><a href="/posts/post-3/">Post 3</a></li>
+
+        </ul>
+
     </astro-content>
 </body>
 
